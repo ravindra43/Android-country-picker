@@ -84,6 +84,9 @@ public class CountryPickerDialog extends AppCompatDialog {
         scrollToHeadingCountry();
     }
 
+    /**
+     * 
+     */
     private void scrollToHeadingCountry() {
         if (headingCountryCode != null) {
             for (int i = 0; i < listview.getCount(); i++) {
