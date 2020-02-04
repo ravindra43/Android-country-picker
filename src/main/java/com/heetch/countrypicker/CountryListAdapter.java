@@ -60,8 +60,8 @@ public class CountryListAdapter extends BaseAdapter {
             item = (Item) itemView.getTag();
         }
 
-         item.getName().setText(new Locale(mContext.getResources().getConfiguration().locale.getLanguage(),
-                 country.getIsoCode()).getDisplayCountry() + (showDialingCode ?
+         item.getName().setText(String.format("%s%s", new Locale(mContext.getResources().getConfiguration().locale.getLanguage(),
+                 country.getIsoCode()).getDisplayCountry(), showDialingCode ?
                  " (+" + country.getDialingCode() + ")" : ""));
 
         // Load drawable dynamically from country code
